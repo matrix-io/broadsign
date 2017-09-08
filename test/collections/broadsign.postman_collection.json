@@ -1,0 +1,49 @@
+{
+	"variables": [],
+	"info": {
+		"name": "broadsign",
+		"_postman_id": "6028bd1a-6741-934c-cefd-4b9a3309c0f5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PoP",
+			"description": "Simulates a broadsign player sending POST requests with PoP data.",
+			"item": [
+				{
+					"name": "single verbose",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var date = new Date();",
+									"postman.setEnvironmentVariable(\"iso_date\", date.toISOString());"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://127.0.0.1:5116",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"api_key\"  : \"XXXXXXXX\",\n\t\"player_id\": \"XXXXXXX\",\n\t\n\t\"pop\" : [\n\t\t{\n\t\t\t\"display_unit_id\" : \"4000\",\n\t\t\t\"frame_id\"  \t  : \"5000\",\n\t\t\t\"n_screens\" \t  : \"1\",\n\t\t\t\"ad_copy_id\"\t  : \"6000\",\n\t\t\t\"campaign_id\"\t  : \"1000\",\n\t\t\t\"schedule_id\"\t  : \"2000\",\n\t\t\t\"impressions\"\t  : \"0\",\n\t\t\t\"interactions\"\t  : \"0\",\n\t\t\t\"end_time\"\t\t  : \"{{iso_date}}\",\n\t\t\t\"duration\"\t\t  : \"5000\",\n\t\t\t\"ext1\"\t\t\t  : \"0\",\n\t\t\t\"ext2\"\t\t\t  : \"0\"\n\t\t}\t\n\t]\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

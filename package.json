@@ -1,0 +1,25 @@
+{
+  "name": "broadsign",
+  "version": "1.0.0",
+  "description": "node.js wrapper for broadsign API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/pop.test.js"
+  },
+  "author": "Jorge Michael Castillo",
+  "contributors": [
+    {"name": "Jorge Michael Castillo"},
+    {"name": "Diego Ribero <diego.ribero@admobilize.com>"}
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "newman": "^3.8.0"
+  }
+}
